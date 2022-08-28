@@ -25,7 +25,6 @@ db.on("error", (err) => {
   console.log(err);
 });
 db.once("open", () => {
-  console.log(process.env.DATABASE_URL);
   console.log("Connected to mongoDB");
 
   // console.log(db.collections);
