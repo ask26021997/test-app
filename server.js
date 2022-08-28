@@ -32,7 +32,7 @@ mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
 });
 
-// app.use("/", indexRouter);
+app.get("/", indexRouter);
 // app.use("/authors", authorRouter);
 
 // //
@@ -42,9 +42,9 @@ mongoose.connect(process.env.DATABASE_URL, {
 //   console.log("App is running on port " + port);
 // });
 
-app.get("/", (req, res) => {
-  res.status(200).send("Hello server is running").end();
-});
+// app.get("/", (req, res) => {
+//   res.status(200).send("Hello server is running").end();
+// });
 
 // Start the server
 const PORT = process.env.PORT || 8080;
