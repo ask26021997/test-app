@@ -39,5 +39,7 @@ app.use("/", indexRouter);
 app.use("/authors", authorRouter);
 
 //
-
-app.listen(process.env.TEST_APP_PORT || 4000);
+const port = process.env.TEST_APP_PORT || 4000;
+app.listen(port, () => {
+  console.log("App is running on port " + port);
+});
