@@ -40,6 +40,6 @@ app.use("/authors", authorRouter);
 
 //
 const port = process.env.TEST_APP_PORT || 4000;
-app.listen(port, () => {
+app.listen(port, function () {
   console.log("App is running on port " + port);
 });
