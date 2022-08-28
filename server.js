@@ -1,22 +1,22 @@
-// if (process.env.NODE_ENV !== "production") {
-//   require("dotenv").config();
-// }
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
-// const express = require("express");
-// const expressLayouts = require("express-ejs-layouts");
+const express = require("express");
+const expressLayouts = require("express-ejs-layouts");
 
-// const indexRouter = require("./routes/index");
-// const authorRouter = require("./routes/authors");
-// const bodyParser = require("body-parser");
-// const app = express();
+const indexRouter = require("./routes/index");
+const authorRouter = require("./routes/authors");
+const bodyParser = require("body-parser");
+const app = express();
 
-// app.set("view engine", "ejs");
-// app.set("views", "./views");
-// app.set("layout", "layouts/layout");
-// app.use(expressLayouts);
-// app.use(express.static("public"));
+app.set("view engine", "ejs");
+app.set("views", "./views");
+app.set("layout", "layouts/layout");
+app.use(expressLayouts);
+app.use(express.static("public"));
 
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // const mongoose = require("mongoose");
 
@@ -43,8 +43,6 @@
 // app.listen(port, host, function () {
 //   console.log("App is running on port " + port);
 // });
-const express = require("express");
-const app = express();
 
 app.get("/", (req, res) => {
   res.status(200).send("Hello server is running").end();
