@@ -33,20 +33,8 @@ mongoose.connect(process.env.DATABASE_URL, {
 });
 
 app.get("/", indexRouter);
-// app.use("/authors", authorRouter);
+app.use("/authors", authorRouter);
 
-// //
-// const host = "0.0.0.0";
-// const port = process.env.TEST_APP_PORT || 4000;
-// app.listen(port, host, function () {
-//   console.log("App is running on port " + port);
-// });
-
-// app.get("/", (req, res) => {
-//   res.status(200).send("Hello server is running").end();
-// });
-
-// Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
